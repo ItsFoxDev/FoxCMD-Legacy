@@ -1,10 +1,12 @@
-echo "This will install FoxCMD to your computer."
+echo "ℹ️ This will install FoxCMD to your computer."
 sleep 0.03
 echo "You may uninstall it at any time"
 sleep 0.03
+echo 
+sleep 0.03
 echo "The installer will only affect the following directory"
 sleep 0.03
-echo "➡️ /usr/local/bin/foxcmd"
+echo "➡️  /usr/local/bin/foxcmd"
 sleep 0.03
 read -p "Press enter to continue or any other key to abort: " confirm
 if [ "$confirm" == "" ]; then

@@ -48,6 +48,7 @@ while [ 1 ]; do
 	    rm -rfv "$(brew --cache)"
     	brew tap --repair &>/dev/null
     fi
+    echo "✅ Cleaned your computer's cache!"
   fi
   if [ "$command" == "help" ]; then
     del=0.02
@@ -77,6 +78,17 @@ while [ 1 ]; do
   fi
   if [ "$command" == "install brew" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+  if [ "$command" == "install list" ]; then
+    echo 
+    sleep $del
+    echo "Available packages:"
+    sleep $del
+    echo
+    sleep $del
+    echo "brew     • A package manager"
+    sleep $del
+    echo
   fi
   if [ "$command" == "remove brew" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"

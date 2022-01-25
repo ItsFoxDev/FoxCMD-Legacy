@@ -1,5 +1,6 @@
 echo 🦊 Starting FoxCMD
 sleep 0.3
+del=0.02
 echo ❓ Run "help" to see commands or exit to leave
 while [ 1 ]; do
   read -p '🦊 → ' command

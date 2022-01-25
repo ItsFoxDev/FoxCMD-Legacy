@@ -86,7 +86,7 @@ while [ 1 ]; do
     sleep $del
     echo
     sleep $del
-    echo "brew     • A package manager"
+    echo "🍺 brew     • A package manager"
     sleep $del
     echo
   fi

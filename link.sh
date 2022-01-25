@@ -1,1 +1,0 @@
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh)"

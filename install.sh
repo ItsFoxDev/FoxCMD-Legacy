@@ -22,12 +22,12 @@ if [ "$confirm" == "" ]; then
   echo "⬇️ Downloading FoxCMD..."
   curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh" -o $HOME/foxcmd.sh
   echo "➡️ Moving files into place"
-  mv $HOME/main.sh /usr/local/bin/foxcmd
+  mv $HOME/foxcmd.sh /usr/local/bin/foxcmd
   echo "🚦 Marking file as executeable"
   chmod +x /usr/local/bin/foxcmd
   echo "✅ FoxCMD is successfully installed!"
   sleep 0.03
-  echo "🏁 To run FoxCMD, run \"FoxCMD\""
+  echo "🏁 To run FoxCMD, run \"foxcmd\""
 else
   echo "❌ Install was cancelled."
 fi

@@ -15,8 +15,10 @@ if [ "$confirm" == "" ]; then
   sleep 0.03
   echo "🦊 Starting FoxCMD installation..."
   sleep 0.3
-  echo "🔑 You may need to enter your password"
-  sudo mkdir /usr/local/bin
+  if [ ! -d "/usr/local/bin" ]; then 
+    echo "🔑 You may need to enter your password"
+    sudo mkdir /usr/local/bin
+  fi
   echo "⬇️ Downloading FoxCMD..."
   curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh" -o $HOME/foxcmd.sh
   echo "➡️ Moving files into place"

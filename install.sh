@@ -1,8 +1,11 @@
 echo "🦊 Starting FoxCMD installation..."
 sleep 0.3
-echo "Downloading FoxCMD..."
-BIN_LOCATION="/usr/local/bin"
-SOURCE=https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh
-curl -fsSL ${SOURCE} -o $HOME/foxcmd.sh
-mv $HOME/foxcmd.sh $BIN_LOCATION/foxcmd
-chmod +x $BIN_LOCATION/foxcmd
+echo "⬇️ Downloading FoxCMD..."
+curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh" -o $HOME/foxcmd.sh
+echo "➡️ Moving files into place"
+mv $HOME/foxcmd.sh /usr/local/bin/foxcmd
+echo "🚦 Marking file as executeable"
+chmod +x /usr/local/bin/foxcmd
+echo "✅ FoxCMD is successfully installed!"
+sleep 0.03
+echo "🏁 To run FoxCMD, run \"FoxCMD\""

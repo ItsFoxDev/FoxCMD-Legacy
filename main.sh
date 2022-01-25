@@ -109,7 +109,7 @@ while [ 1 ]; do
     chmod +x /usr/local/bin/foxcmd
     echo "⬆️ Updated FoxCMD"
     sleep $del
-    echo "Please run \"Exit\" then \"foxcmd\" to apply the update."
+    exit 0
   fi
   if [ "$command" == "addspace" ]; then
     defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'

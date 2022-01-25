@@ -1,4 +1,3 @@
-clear
 echo 🦊 Starting FoxCMD
 sleep 0.3
 echo ❓ Run "help" to see commands or exit to leave
@@ -61,13 +60,17 @@ while [ 1 ]; do
     sleep $del
     echo "❓ help     • Shows this list of commands"
     sleep $del
-    echo "🍺 getbrew  • Installs homebrew"
+    echo "⬇️  install  • Installs a package"
+    sleep $del
+    echo "❌ remove   • Removes a package"
     sleep $del
     echo "♻️  clear    • Clears the terminal history"
     sleep $del
     echo "⬜️ addspace • Adds a spacer to your mac's dock"
     sleep $del
     echo "😎 hack     • Makes it look like you are hacking"
+    sleep $del
+    echo "⬆️  update   • Updates FoxCMD"
     sleep $del
     echo "❌ exit     • Exits FoxCMD"
   fi
@@ -85,6 +88,15 @@ while [ 1 ]; do
     clear
     echo 🦊 Starting FoxCMD
     echo ❓ Run "help" to see commands or exit to leave
+  fi
+  if [ "$command" == "update" ]; then
+    echo ⬆️ Updating FoxCMD
+    curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh" -o $HOME/foxcmd.sh
+    mv $HOME/foxcmd.sh /usr/local/bin/foxcmd
+    chmod +x /usr/local/bin/foxcmd
+    echo "⬆️ Updated FoxCMD"
+    sleep $del
+    echo "Please run \"Exit\" then \"foxcmd\" to apply the update."
   fi
   if [ "$command" == "addspace" ]; then
     defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'

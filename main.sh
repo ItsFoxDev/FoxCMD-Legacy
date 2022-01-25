@@ -105,6 +105,7 @@ while [ 1 ]; do
   if [ "$command" == "update" ]; then
     echo ⬆️ Updating FoxCMD
     curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh" -o $HOME/foxcmd.sh
+    rm /usr/local/bin/foxcmd
     mv $HOME/foxcmd.sh /usr/local/bin/foxcmd
     chmod +x /usr/local/bin/foxcmd
     echo "⬆️ Updated FoxCMD"

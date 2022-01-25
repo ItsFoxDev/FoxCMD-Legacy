@@ -6,8 +6,8 @@ echo "The installer will only affect the following directory"
 sleep 0.03
 echo "➡️ /usr/local/bin/foxcmd"
 sleep 0.03
-read -p "Continue? Y/N: " confirm
-if [ "$confirm" == "Y" ]; then
+read -p "Press enter to continue or any other key to abort: " confirm
+if [ "$confirm" == "" ]; then
   echo "🦊 Starting FoxCMD installation..."
   sleep 0.3
   echo "⬇️ Downloading FoxCMD..."

@@ -11,8 +11,12 @@ echo "➡️  /usr/local/bin/foxcmd"
 sleep 0.03
 read -p "Press enter to continue or any other key to abort: " confirm
 if [ "$confirm" == "" ]; then
+  echo
+  sleep 0.03
   echo "🦊 Starting FoxCMD installation..."
   sleep 0.3
+  echo "🔑 You may need to enter your password"
+  sudo mkdir /usr/local/bin
   echo "⬇️ Downloading FoxCMD..."
   curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh" -o $HOME/foxcmd.sh
   echo "➡️ Moving files into place"

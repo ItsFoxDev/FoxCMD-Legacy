@@ -20,14 +20,15 @@ if [ "$confirm" == "" ]; then
     sudo mkdir /usr/local/bin
   fi
   echo "⬇️ Downloading FoxCMD..."
-  curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/main.sh" -o $HOME/foxcmd.sh
+  curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/foxcmd-legacy.sh" -o $HOME/foxcmd-legacy.sh
   echo "➡️  Moving files into place"
-  mv $HOME/foxcmd.sh /usr/local/bin/foxcmd
+  mv $HOME/foxcmd-legacy.sh /usr/local/bin/foxcmd
   echo "🚦  Marking file as executeable"
   chmod +x /usr/local/bin/foxcmd
-  echo "✅ FoxCMD is successfully installed!"
+  echo "✅ FoxCMD legacy is successfully installed!"
   sleep 0.03
-  echo "🏁 To run FoxCMD, run \"foxcmd\""
+  echo "🏁 To run FoxCMD legacy, run \"foxcmd\""
 else
   echo "❌ Install was cancelled."
+  exit 0
 fi

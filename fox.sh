@@ -26,7 +26,7 @@ if [ "$1" == "list" ]; then
   sleep $del
   echo "🍺 brew        • Package manager"
   sleep $del
-  echo "🌶 spicetify   • Themes for Spotify"
+  echo "🌶  spicetify   • Themes for Spotify"
   sleep $del
   echo ""
   sleep $del

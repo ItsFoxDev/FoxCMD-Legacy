@@ -1,9 +1,18 @@
 echo 🦊 Starting FoxCMD
 sleep 0.3
+echo "⚠️ Note that this version is no longer"
+sleep 0.03
+echo "  being updated. Run \"new\" to get"
+sleep 0.03
+echo "  the updated version."
+sleep 0.03
 del=0.02
 echo ❓ Run "help" to see commands or exit to leave
 while [ 1 ]; do
   read -p '🦊 → ' command
+  if [ "$command" == "new" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/install-v2.sh)" 
+  fi
   if [ "$command" == "clean" ]; then
     echo 🗑 Cleaning Caches
     rm -rf ~/Library/Caches/*

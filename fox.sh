@@ -30,7 +30,7 @@ if [ "$1" == "list" ]; then
   sleep $del
   echo ""
   sleep $del
-if [ "$1" == "" ]; then
+if [ $# -eq 0 ]; then
   echo ""
   echo "🦊 FoxCMD v2"
   sleep $del

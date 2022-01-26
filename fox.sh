@@ -52,4 +52,6 @@ if [ $# -eq 0 ]; then
   sleep $del
   echo "📦 list        • Lists installable packages"
   sleep $del
+  echo ""
+  sleep $del
 fi

@@ -20,7 +20,7 @@ if [ "$confirm" == "" ]; then
     sudo mkdir /usr/local/bin
   fi
   echo "⬇️ Downloading FoxCMD..."
-  curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/foxcmd-legacy.sh" -o $HOME/foxcmd-legacy.sh
+  curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD-Legacy/main/foxcmd.sh" -o $HOME/foxcmd-legacy.sh
   echo "➡️  Moving files into place"
   mv $HOME/foxcmd-legacy.sh /usr/local/bin/foxcmd
   echo "🚦  Marking file as executeable"

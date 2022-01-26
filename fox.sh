@@ -33,11 +33,6 @@ if [ "$1" == "list" ]; then
 fi
 if [ $# -eq 0 ]; then
   echo ""
-  echo "🦊 FoxCMD v2"
-  sleep $del
-  echo ""
-  sleep $del
-  echo ""
   sleep $del
   echo "==== 📄 Commands 📄 ===="
   sleep $del

@@ -1,6 +1,3 @@
-if [ "$1" == "info" ]; then
-  echo "FoxCMD 2.0.1"
-fi
 if [ "$1" == "install" ]; then
   if [ "$2" == "brew"]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -11,5 +8,11 @@ if [ "$1" == "install" ]; then
   fi
 fi
 if [ "$1" == "update" ]; then
-  echo "⬆️ Updating FoxCMD..."
+  echo "⬇️ Downloading FoxCMD"
+  curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/fox.sh" -o $HOME/fox.sh
+  echo "➡️  Moving files into place"
+  mv $HOME/fox.sh /usr/local/bin/fox
+  echo "🚦  Marking file as executeable"
+  chmod +x /usr/local/bin/fox
+  echo "✅ FoxCMD v2 is has been successfully update!"
 fi

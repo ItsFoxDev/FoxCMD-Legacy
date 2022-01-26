@@ -11,11 +11,11 @@ if [ "$1" == "install" ]; then
   fi
 fi
 if [ "$1" == "update" ]; then
-  echo "⬇️ Downloading FoxCMD"
+  echo "⬇️  Downloading FoxCMD"
   curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/fox.sh" -o $HOME/fox.sh
   echo "➡️  Moving files into place"
   mv $HOME/fox.sh /usr/local/bin/fox
-  echo "🚦  Marking file as executeable"
+  echo "🚦 Marking file as executeable"
   chmod +x /usr/local/bin/fox
   echo "✅ FoxCMD v2 is has been successfully updated!"
 fi

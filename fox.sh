@@ -43,9 +43,9 @@ if [ $# -eq 0 ]; then
   sleep $del
   echo ""
   sleep $del
-  echo "⬇️ install     • Installs a package"
+  echo "⬇️  install     • Installs a package"
   sleep $del
-  echo "⬆️ update      • Updates FoxCMD"
+  echo "⬆️  update      • Updates FoxCMD"
   sleep $del
   echo "📦 list        • Lists installable packages"
   sleep $del

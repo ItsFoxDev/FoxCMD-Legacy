@@ -11,7 +11,23 @@ echo ❓ Run "help" to see commands or exit to leave
 while [ 1 ]; do
   read -p '🦊 → ' command
   if [ "$command" == "new" ]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/install-v2.sh)" 
+    sleep 0.03
+    echo "🦊 Starting FoxCMD v2 installation..."
+    sleep 0.3
+    if [ ! -d "/usr/local/bin" ]; then 
+      echo "🔑 You may be asked to enter your password"
+      sudo mkdir /usr/local/bin
+    fi
+    echo "⬇️ Downloading FoxCMD v2..."
+    curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/fox.sh" -o $HOME/fox.sh
+    echo "➡️  Moving files into place"
+    mv $HOME/fox.sh /usr/local/bin/fox
+    echo "🚦  Marking file as executeable"
+    chmod +x /usr/local/bin/fox
+    echo "✅ Installed FoxCMD v2."
+    sleep 0.03
+    echo "🏁 To run the new version, type \"Fox\"."
+    exit 0
   fi
   if [ "$command" == "clean" ]; then
     echo 🗑 Cleaning Caches

@@ -11,13 +11,21 @@ if [ "$1" == "install" ]; then
   fi
 fi
 if [ "$1" == "update" ]; then
+  echo ""
+  sleep $del
   echo "⬇️  Downloading FoxCMD"
+  sleep $del
   curl -fsSL "https://raw.githubusercontent.com/ItsFoxDev/FoxCMD/main/fox.sh" -o $HOME/fox.sh
   echo "➡️  Moving files into place"
+  sleep $del
   mv $HOME/fox.sh /usr/local/bin/fox
   echo "🚦 Marking file as executeable"
+  sleep $del
   chmod +x /usr/local/bin/fox
   echo "✅ FoxCMD v2 is has been successfully updated!"
+  sleep $del
+  echo ""
+  sleep $del
 fi
 if [ "$1" == "list" ]; then
   echo ""

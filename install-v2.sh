@@ -16,7 +16,7 @@ if [ "$confirm" == "" ]; then
   echo "🦊 Starting FoxCMD v2 installation..."
   sleep 0.3
   if [ ! -d "/usr/local/bin" ]; then 
-    echo "🔑 You may need to enter your password"
+    echo "🔑 You may be asked to enter your password"
     sudo mkdir /usr/local/bin
   fi
   echo "⬇️ Downloading FoxCMD v2..."

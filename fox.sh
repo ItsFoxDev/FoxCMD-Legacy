@@ -10,3 +10,6 @@ if [ "$1" == "install" ]; then
     curl -fsSL https://raw.githubusercontent.com/CharlieS1103/spicetify-marketplace/main/install.sh | sh
   fi
 fi
+if [ "$1" == "update" ]; then
+  echo "⬆️ Updating FoxCMD..."
+fi
